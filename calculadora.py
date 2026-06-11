@@ -1,6 +1,4 @@
 from re import search, findall, sub
-from functools import reduce
-
 
 def es_numero(token):
     try:
@@ -9,7 +7,9 @@ def es_numero(token):
     except ValueError:
         return False
 
+
 es_operador = lambda token: token in {'+', '-', '*', '/', '^'}
+
 
 def procesar_operacion(operacion: str, tk_cantidad = 3) -> list:
     """
